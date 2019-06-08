@@ -9,10 +9,12 @@ canvas.pack()
 background_image = tk.PhotoImage(file='download.png')
 background_label = tk.Label(root, image=background_image)
 background_label.place(x=0, y=0, relheight=1, relwidth=1)
-'''
+
 def button_cliked():
-    label['text'] += str('=', sm(num1, num2))
-'''
+    num2 = int(label['text'])
+    a = sm(num1, num2)
+    label['text'] += str('a',)
+
 def button_cliked1():
     label['text'] += str('1')
 
@@ -48,9 +50,9 @@ def button_clikedsub():
 
 def button_clikedsm():
     num1 = int(label['text'])
-    print('num1')
-    label['text'] = str('+')
-    
+    print(num1)
+    label['text'] = str('')
+    print(num1)
 
 def button_clikeddiv():
     label['text'] += str('/')
@@ -67,10 +69,10 @@ frame.place(relx=0.1, rely=0.2, relheight=0.15, relwidth=0.8)
 '''
 entry = tk.Entry(frame, bg='white', font=40)
 entry.place( relheight=1, relwidth=0.6)
-
+'''
 button = tk.Button(frame, text='result', bg='blue', command=button_cliked)
 button.place(relx=0.7, rely=0, relheight=1, relwidth=0.3)
-'''
+
 label = tk.Label(frame, bg='white', anchor='nw')
 label.place(relx=0 , rely=0 ,relheight=1, relwidth=0.65)
 
