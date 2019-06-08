@@ -47,7 +47,10 @@ def button_clikedsub():
     label['text'] += str('-')
 
 def button_clikedsm():
-    label['text'] += str('+')
+    num1 = int(label['text'])
+    print('num1')
+    label['text'] = str('+')
+    
 
 def button_clikeddiv():
     label['text'] += str('/')
@@ -57,22 +60,6 @@ def button_clikedmul():
 
 def sm(x, y):
     return x + y
-
-
-'''
-
-
-if button['command'] == str("button_clikedsm"):
-    num1 = int(label['text'])
-    print('num1')
-    label['text'] = str('')
-    
-'''
-    
-
-  
-
-
 
 
 frame = tk.Frame(root, bg='gray', bd=3)
