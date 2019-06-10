@@ -12,8 +12,21 @@ background_label.place(x=0, y=0, relheight=1, relwidth=1)
 
 def button_cliked():
     num2 = int(label['text'])
-    a = sm(num1, num2)
-    label['text'] += str('a',)
+    if b == "+":
+        a = sm(num1, num2)
+        label['text'] = str(a)
+    elif b == "-":
+        a = sub(num1, num2)
+        label['text'] = str(a)
+    elif b == "/":
+        a = div(num1, num2)
+        label['text'] = str(a)
+    elif b == "*":
+        a = mul(num1, num2)
+        label['text'] = str(a)
+
+      
+
 
 def button_cliked1():
     label['text'] += str('1')
@@ -46,22 +59,53 @@ def button_cliked0():
     label['text'] += str('0')
 
 def button_clikedsub():
-    label['text'] += str('-')
+    global num1
+    global b
+    b = "-"
+    num1 = int(label['text'])
+    print(num1)
+    label['text'] = str('')
+    print(num1)
 
 def button_clikedsm():
+    global num1
+    global b
+    b = "+"
     num1 = int(label['text'])
     print(num1)
     label['text'] = str('')
     print(num1)
 
 def button_clikeddiv():
-    label['text'] += str('/')
+    global num1
+    global b
+    b = "/"
+    num1 = int(label['text'])
+    print(num1)
+    label['text'] = str('')
+    print(num1)
 
 def button_clikedmul():
-    label['text'] += str('*')
+    global num1
+    global b
+    b = "*"
+    num1 = int(label['text'])
+    print(num1)
+    label['text'] = str('')
+    print(num1)
 
 def sm(x, y):
     return x + y
+
+def div(x, y):
+    return x / y
+
+def sub(x, y):
+    return x - y
+
+def mul(x, y):
+    return x * y
+
 
 
 frame = tk.Frame(root, bg='gray', bd=3)
