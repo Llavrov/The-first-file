@@ -58,6 +58,10 @@ def button_cliked9():
 def button_cliked0():
     label['text'] += str('0')
 
+def button_clikedzero():
+    label['text'] = str('')
+
+
 def button_clikedsub():
     global num1
     global b
@@ -167,6 +171,9 @@ button.place(relx=0.85 , rely=0.35 ,relheight=0.25, relwidth=0.15)
 button = tk.Button(lower_frame, text='/', bg='lightsteelblue', command=button_clikeddiv)
 button.place(relx=0.85 , rely=0.6 ,relheight=0.25, relwidth=0.15)
 
+#==========================
+button = tk.Button(lower_frame, text='rep', bg='lightsteelblue', command=button_clikedzero)
+button.place(relx=0.7 , rely=0.85 ,relheight=0.1, relwidth=0.30)
 
 
 root.mainloop()
