@@ -6,7 +6,7 @@ root = tk.Tk()
 canvas = tk.Canvas(root,  height=HEIGHT, width=WIDTH, bg='black')
 canvas.pack()
 
-background_image = tk.PhotoImage(file='download.png')
+background_image = tk.PhotoImage(file='background_image.png')
 background_label = tk.Label(root, image=background_image)
 background_label.place(x=0, y=0, relheight=1, relwidth=1)
 
@@ -175,5 +175,5 @@ button.place(relx=0.85 , rely=0.6 ,relheight=0.25, relwidth=0.15)
 button = tk.Button(lower_frame, text='rep', bg='lightsteelblue', command=button_clikedzero)
 button.place(relx=0.7 , rely=0.85 ,relheight=0.1, relwidth=0.30)
 
-
-root.mainloop()
+if __name__ == '__main__':
+    root.mainloop()
