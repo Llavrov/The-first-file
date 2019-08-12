@@ -48,68 +48,6 @@ def first1(labels, b):
         cur_label = tk.Label(l_frame, text=labels[i], bg='lavender', anchor='w', font='Times 12')
         cur_label.pack()
 
-
-# def second2():
-#     l_frame = tk.Frame(root, bg='lavender', bd=1)
-#     l_frame.place(relx=0.55, rely=0.43, relheight=0.25, relwidth=0.15)
-#     labels = [5, 4, 3, 2, 0]
-#     label['text'] = 'Now battery have 0 units of energy'
-#
-#     for i in range(len(labels)):
-#         cur_label = tk.Label(l_frame, text=labels[i], bg='lavender', anchor='w', font='Times 12')
-#         cur_label.pack()
-#
-#
-# def third3():
-#     a = entry.get()
-#     b = int(a)
-#     l_frame = tk.Frame(root, bg='lavender', bd=1)
-#     l_frame.place(relx=0.55, rely=0.43, relheight=0.25, relwidth=0.15)
-#     labels = [5, 4, 3, b - 12, 0]
-#     label['text'] = 'Now battery have 0 units of energy'
-#
-#     for i in range(len(labels)):
-#         cur_label = tk.Label(l_frame, text=labels[i], bg='lavender', anchor='w', font='Times 12')
-#         cur_label.pack()
-#
-#
-# def forth4():
-#     a = entry.get()
-#     b = int(a)
-#     l_frame = tk.Frame(root, bg='lavender', bd=1)
-#     l_frame.place(relx=0.55, rely=0.43, relheight=0.25, relwidth=0.15)
-#     labels = [5, 4, b - 9, 0, 0]
-#     label['text'] = 'Now battery have 0 units of energy'
-#
-#     for i in range(len(labels)):
-#         cur_label = tk.Label(l_frame, text=labels[i], bg='lavender', anchor='w', font='Times 12')
-#         cur_label.pack()
-#
-#
-# def fifth5():
-#     a = entry.get()
-#     b = int(a)
-#     l_frame = tk.Frame(root, bg='lavender', bd=1)
-#     l_frame.place(relx=0.55, rely=0.43, relheight=0.25, relwidth=0.15)
-#     labels = [5, b - 5, 0, 0, 0]
-#     label['text'] = 'Now battery have 0 units of energy'
-#
-#     for i in range(len(labels)):
-#         cur_label = tk.Label(l_frame, text=labels[i], bg='lavender', anchor='w', font='Times 12')
-#         cur_label.pack()
-#
-#
-# def last(labels):
-#     l_frame = tk.Frame(root, bg='lavender', bd=1)
-#     l_frame.place(relx=0.55, rely=0.43, relheight=0.25, relwidth=0.15)
-#     # labels = [4, 0, 0, 0, 0]
-#     label['text'] = 'Now battery have 0 units of energy'
-#
-#     for i in range(len(labels)):
-#         cur_label = tk.Label(l_frame, text=labels[i], bg='lavender', anchor='w', font='Times 12')
-#         cur_label.pack()
-
-
 def button_cliked():
     a = entry.get()
     b = int(a)
@@ -122,34 +60,33 @@ def button_cliked():
 
 
         if b >= 14 and b < 15:
-
             print(str(b) + ' now battery have 0 units of energy')
             first1([5, 4, 3, 2, 0], b)
+
+        if b >= 12 and b < 14:
+            print(str(b) + ' now battery have 0 units of energy')
+            first1([5, 4, 3, b - 12, 0], b)
+
+        if b >= 9 and b < 12:
+
+            print(str(b) + ' now battery have 0 units of energy')
+            first1([5, 4, b - 9, 0, 0], b)
+
+        if b >= 5 and b < 9:
+            print(str(b) + ' now battery have 0 units of energy')
+            first1([5, b - 5, 0, 0, 0], b)
+
+        if b < 5 and b >= 1:
+            print(str(b) + ' now battery have 0 units of energy')
+            first1([b, 0, 0, 0, 0], b)
+
+        if b < 1 and b == 0:
+            first1([0, 0, 0, 0, 0], b)
+            print('0 now battery have 0 units of energy')
             break
+
         b = b - 1
         time.sleep(1)
-        # if b >= 12 and b < 14:
-        #     print(str(b) + ' now battery have 0 units of energy')
-        #     # third3()
-        #
-        # if b >= 9 and b < 12:
-        #     print(str(b) + ' now battery have 0 units of energy')
-        #     # forth4()
-        #
-        # if b >= 5 and b < 9:
-        #     print(str(b) + ' now battery have 0 units of energy')
-        #     # fifth5()
-        #
-        # if b < 5:
-        #     print(str(b) + ' now battery have 0 units of energy')
-        #     last([4, 0, 0, 0, 0])
-        #
-        # if b == 0:
-        #     print('0 now battery have 0 units of energy')
-        #     break
-        #
-        # b = b - 1
-        # time.sleep(1)
 
 
 low_frame = tk.Frame(root, bg='gray', bd=1)
